@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+        /*box-size:border-box;*/
+        }
+        body {
+            background: rgba(255, 84, 151, 0.40);
+        }
+        #container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 150px;
+        }
+        #cont {
+            width: 100%;
+            height: 300px;
+            background-color: rgba(11, 177, 224, 0.82);
+            border: 2px solid #ffffff;
+        }
+        h3 {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px 15px;
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+        #forgot h3 {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #forgot div {
+            margin-top: 30px;
+        }
+        input{
+            display: block;
+            width: 250px;
+            margin: 10px 13px;
+            padding: 10px;
+            font-size: 1.3em;
+            color: rgba(11, 177, 224, 0.82);
+            outline: 2px solid #ffffff;
+        }
+
+        input[type="submit"] {
+            width: 272px;
+            color: #6e6e6e;
+        }
+        .comm {
+            position: absolute;
+            visibility: hidden;
+        }
+        #login {
+            visibility: visible;
+        }
+        p {
+            padding: 10px 15px;
+            font-size: 1.3em;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="cont">
+            <div id="login" class="comm">
+                <p onclick="forTabFun()">Forget Password?</p>
+            </div>
+            
+            <div id="forgot" class="comm">
+                <h3>Forgot Password</h3>
+                <div>
+                    <input id="fe" type="email" placeholder="Email" required/>
+                    <input type="submit" onclick="forgot()" value="Submit"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var emailArray=[];
+        var loginBox = document.getElementById("login");
+        var forgetBox = document.getElementById("forgot");
+        loginBox.style.visibility="visible";
+        function forTabFun(){
+            event.preventDefault();
+
+            forgetBox.style.visibility="visible";
+            loginBox.style.visibility="hidden";
+        }
+        function forgot(){
+            event.preventDefault();
+
+            var email = document.getElementById("fe").value;
+
+            if(emailArray.indexOf(email) == -1){
+                if (email == ""){
+                    alert("Email required.");
+                    return ;
+                }
+                alert("Email does not exist.");
+                return ;
+            }
+
+            alert("email is send to your email check it in 24hr. \n Thanks");
+            document.getElementById("fe").value ="";
+        }
+    </script>
+</body>
+</html>

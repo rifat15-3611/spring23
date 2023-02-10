@@ -1,0 +1,34 @@
+Code 	  L-4,T-1 (Batch-55)  				Credit
+CSE411 Computer Architecture and Organization  	3
+CSE414 Web Engineering  				 	1
+CSE415 Web Engineering Lab  				2
+CSE421 Computer Graphics  					1
+CSE422 Computer Graphics Lab  				2
+CSE423 Information Security  				3
+CSE499 Project / Internship (Phase I) 			3
+						  Total Credits 15
+
+
+CSE411 Computer Architecture and Organization,CSE414 Web Engineering,CSE415 Web Engineering Lab,CSE421 Computer Graphics,CSE422 Computer Graphics Lab,CSE423 Information Security,CSE499 Project / Internship (Phase I) 
+
+(-----Blc link-----)
+
+course      :- computer architecture and organization
+BLC         :- https://elearn.daffodilvarsity.edu.bd/course/view.php?id=19166
+Enrollment  :- Cse411_PC-E
+telegram    :- https://t.me/+ZImbZhhuJR0zY2Zl
+
+course      :- Information Security
+BLC         :- https://elearn.daffodilvarsity.edu.bd/user/index.php?id=20372
+Enrollment  :- CSE423@e
+whatsApp    :- https://chat.whatsapp.com/Kz4dYne0eh4Fz1wnDVd0e7
+
+course      :- web engineering
+BLC         :- https://elearn.daffodilvarsity.edu.bd/course/view.php?id=19571
+Enrollment  :- cse414#E
+telegram    :- https://t.me/+VQZmpaNUt3o1MGE1
+
+course      :- Computer Graphics
+BLC         :- https://elearn.daffodilvarsity.edu.bd/course/view.php?id=20009 
+Enrollment  :- CSE421-pc-e
+telegram    :- https://t.me/+agxdROObZE01OWQ9

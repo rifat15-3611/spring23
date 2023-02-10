@@ -1,0 +1,98 @@
+#include<GL/gl.h>: This line includes the header file for the GL library, which provides the core functionality of OpenGL.
+#include<GL/glu.h>: This line includes the header file for the GLU library, which provides higher-level functionality for working with OpenGL.
+#include<GL/glut.h>: This line includes the header file for the GLUT library, which provides a simple interface for creating windows and managing the OpenGL rendering context.
+void display(): This function is the display callback, which is called by GLUT whenever the window needs to be redrawn. It clears the color buffer, sets the current color to red, and draws a line.
+glClear(GL_COLOR_BUFFER_BIT);: This line clears the color buffer, filling it with the background color.
+glLoadIdentity();: This line resets the current matrix to the identity matrix.
+glColor3f(1.0f, 0.0f, 0.0f);: This line sets the current color to red.
+glBegin(GL_LINES);: This line begins the definition of a GL_LINES primitive, which is a series of individual lines.
+glVertex2d(5, 10);: This line defines the first endpoint of the line. The glVertex2d function specifies the position of a vertex in 2D space, using double-precision floating-point values.
+glVertex2d(10, 15);: This line defines the second endpoint of the line.
+glEnd();: This line ends the definition of the GL_LINES primitive.
+glFlush();: This line flushes the OpenGL command buffer, ensuring that the line is drawn as soon as possible.
+void init(): This function initializes the OpenGL state. It sets the background color to yellow, sets up a 2D orthographic projection, and switches to the model-view matrix.
+int main(int argc, char** argv): This function is the main entry point of the program. It initializes GLUT, creates a window, sets the display callback function, initializes the OpenGL state, and starts the main loop.
+
+
+#include<GL/gl.h>
+#include<GL/glu.h>
+#include<GL/glut.h>
+
+
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    glLoadIdentity();
+
+    glColor3f(1,1,0);
+    glBegin(GL_QUADS);
+        glVertex2i(10,10);
+        glVertex2i(20,8);
+        glVertex2i(17,16);
+        glVertex2i(12,16);
+    glEnd();
+
+    glColor3f(1,0,1);
+    glBegin(GL_TRIANGLES);
+        glVertex2i(17,17);
+        glVertex2i(27,17);
+        glVertex2i(22,23);
+    glEnd();
+
+    glFlush();
+}
+
+void init()
+{
+    glClearColor(1,1,1,0);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(0,40,0,40);
+    glMatrixMode(GL_MODELVIEW);
+}
+
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_RGB);
+
+    glutInitWindowPosition(300, 100);
+    glutInitWindowSize(500, 500);
+
+    glutCreateWindow("window");
+
+    glutDisplayFunc(display);
+    init();
+
+    glutMainLoop();
+}
+
+-------------------------------------------------------------------------
+
+The display() function:
+
+Clears the color buffer using glClear(GL_COLOR_BUFFER_BIT)
+Resets the current matrix using glLoadIdentity()
+Sets the color to yellow using glColor3f(1,1,0)
+Draws a quadrilateral using the glBegin(GL_QUADS) and glEnd() functions, with the vertices defined using glVertex2i(x,y)
+Sets the color to magenta using glColor3f(1,0,1)
+Draws a triangle using the glBegin(GL_TRIANGLES) and glEnd() functions, with the vertices defined using glVertex2i(x,y)
+Forces the execution of the previous graphics operations using glFlush()
+
+The init() function:
+
+Sets the background color to white using glClearColor(1,1,1,0)
+Sets the projection mode to be orthographic 2D using glMatrixMode(GL_PROJECTION), glLoadIdentity(), and gluOrtho2D(0,40,0,40)
+Resets the current matrix mode to be the model view using glMatrixMode(GL_MODELVIEW)
+
+The main function:
+
+Initializes the GLUT library using glutInit(&argc, argv)
+Sets the display mode to RGB using glutInitDisplayMode(GLUT_RGB)
+Sets the window position using glutInitWindowPosition(300, 100)
+Sets the window size using glutInitWindowSize(500, 500)
+Creates a window with the title "window" using glutCreateWindow("window")
+Registers the display function as the display callback using glutDisplayFunc(display)
+Calls the init function to initialize the graphics
+Starts the main event loop of the program using glutMainLoop()
+
